@@ -1,2 +1,5 @@
 # Environment variables
 .env
+
+# Byte-compiled files
+__pycache__
