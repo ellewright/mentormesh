@@ -1,0 +1,19 @@
+.card {
+    background-color: #333;
+    color: white;
+    width: 15rem;
+    height: 15rem;
+}
+
+.category {
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+.title {
+    padding: 3rem 0 0 0.5rem;
+}
+
+.description {
+    color: #999;
+    padding-left: 0.5rem;
+}
