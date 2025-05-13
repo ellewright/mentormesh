@@ -1,23 +1,13 @@
-from enum import Enum
+import sys
 from http.client import HTTPException
-
 from fastapi import FastAPI
-from pydantic import BaseModel
+
+sys.path.append("./model")
+
+from skill import Skill
+from skill import Category
 
 app = FastAPI()
-
-class Category(Enum):
-    MUSIC = "music"
-    SCIENCE = "science"
-    MATH = "math"
-    HISTORY = "history"
-    LIFE = "life"
-
-class Skill(BaseModel):
-    id: int
-    category: Category
-    title: str
-    description: str
 
 skills = {
     0: Skill(id=0, category=Category.LIFE, title="How to Change a Tire", description="I'll teach you how to change a car tire."),
