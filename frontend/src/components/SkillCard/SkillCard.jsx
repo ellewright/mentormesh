@@ -1,11 +1,13 @@
+import { useEffect, useState } from "react"
 import styles from "./SkillCard.module.css"
+import { getAllSkills } from "../../api/config"
 
-export default function SkillCard() {
+export default function SkillCard({ title, description, category }) {
     return (
         <div className={styles.card}>
-            <p className={styles.category}>Category</p>
-            <h1 className={styles.title}>Title</h1>
-            <p className={styles.description}>Description</p>
+            <p className={styles.category}>{category}</p>
+            <h1 className={styles.title}>{title}</h1>
+            <p className={styles.description}>{description}</p>
         </div>
     )
 }
