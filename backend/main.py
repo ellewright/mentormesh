@@ -11,8 +11,13 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.get("/")
-def get_all_skills() -> dict[str, dict[int, Skill]]:
-    return {"skills": skills}
+def get_all_skills() -> list[Skill]:
+    skill_list = []
+    
+    for skill in skills:
+        skill_list.append(skill)
+
+    return skill_list
 
 @app.get("/skills/{skill_id}")
 def get_skill_by_id(skill_id: int) -> Skill:
