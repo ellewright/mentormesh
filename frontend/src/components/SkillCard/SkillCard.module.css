@@ -2,7 +2,7 @@
     background-color: #333;
     color: white;
     width: 15rem;
-    height: 15rem;
+    height: 16rem;
 }
 
 .category {
@@ -10,10 +10,15 @@
 }
 
 .title {
-    padding: 3rem 0 0 0.5rem;
+    height: 2.5em;
+    overflow: hidden;
+    padding: 3rem 0.5rem 0 0.5rem;
 }
 
 .description {
+    height: 2.5em;
+    overflow: hidden;
     color: #999;
     padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
