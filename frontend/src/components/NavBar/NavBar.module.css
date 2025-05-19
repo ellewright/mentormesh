@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    height: 75px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    color: white;
+}
+
+.navbar>* {
+    margin-left: 0.5rem;
+}
+
+.header {
+    color: transparent;
+    background: -webkit-linear-gradient(oklch(82.8% 0.189 84.429), oklch(47.3% 0.137 46.201));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.slogan {
+    font-size: 0.60em;
+}
