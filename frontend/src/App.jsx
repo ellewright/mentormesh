@@ -1,12 +1,12 @@
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
-import SkillPage from './pages/SkillPage/SkillPage'
+import SkillsPage from './pages/SkillsPage/SkillsPage'
 
 function App() {
   return (
     <>
       <NavBar />
-      <SkillPage />
+      <SkillsPage />
     </>
   )
 }
