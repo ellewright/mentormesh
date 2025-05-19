@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAllSkills } from "../../api/config"
 import SkillCard from "../../components/SkillCard/SkillCard"
-// import styles from "./SkillPage.module.css"
+import styles from "./SkillPage.module.css"
 
 export default function SkillPage() {
     const [skills, setSkills] = useState([])
@@ -20,7 +20,7 @@ export default function SkillPage() {
     }, [])
 
     return (
-        <div>
+        <div className={styles.list}>
             {skills.map((skill) => (
                 <SkillCard key={skill.id} title={skill.title} description={skill.description} category={skill.category} />
             ))}
