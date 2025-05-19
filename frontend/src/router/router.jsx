@@ -2,6 +2,7 @@ import { useRouteError } from "react-router-dom";
 import { NavLayout } from "../components/NavBar/NavBar";
 import SkillsPage from "../pages/SkillsPage/SkillsPage";
 import { createBrowserRouter } from "react-router-dom";
+import HomePage from "../pages/HomePage/HomePage";
 
 export const router = createBrowserRouter([
     {
@@ -11,6 +12,10 @@ export const router = createBrowserRouter([
             {
                 errorElement: <ErrorPage />,
                 children: [
+                    {
+                        path: "/",
+                        element: <HomePage />
+                    },
                     {
                         path: "/skills",
                         children: [
