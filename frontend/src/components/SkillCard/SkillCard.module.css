@@ -6,19 +6,22 @@
 }
 
 .category {
-    padding: 0.5rem 0 0 0.5rem;
+    padding: 0rem 0 0 1rem;
 }
 
 .title {
     height: 2.5em;
     overflow: hidden;
-    padding: 3rem 0.5rem 0 0.5rem;
+    padding: 3rem 0.5rem 0 1rem;
+    background: -webkit-linear-gradient(oklch(82.8% 0.189 84.429), oklch(47.3% 0.137 46.201));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .description {
     height: 2.5em;
     overflow: hidden;
     color: #999;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
     padding-right: 0.5rem;
 }
