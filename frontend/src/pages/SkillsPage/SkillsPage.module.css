@@ -1,6 +1,7 @@
 .list {
     display: grid;
-    row-gap: 50px;
-    column-gap: 50px;
+    row-gap: 2rem;
+    column-gap: 2rem;
     grid-template-columns: auto auto auto auto;
+    margin: 4rem 16rem 4rem 16rem;
 }
