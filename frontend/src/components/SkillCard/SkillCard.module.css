@@ -3,6 +3,8 @@
     color: white;
     width: 15rem;
     height: 16rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
 }
 
 .category {
@@ -13,7 +15,7 @@
     height: 2.5em;
     overflow: hidden;
     padding: 3rem 0.5rem 0 1rem;
-    background: -webkit-linear-gradient(oklch(82.8% 0.189 84.429), oklch(47.3% 0.137 46.201));
+    background: oklch(82.8% 0.189 84.429);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
