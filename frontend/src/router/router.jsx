@@ -3,6 +3,7 @@ import { NavLayout } from "../components/NavBar/NavBar";
 import SkillsPage from "../pages/SkillsPage/SkillsPage";
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
+import SkillPage from "../pages/SkillPage/SkillPage";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +23,15 @@ export const router = createBrowserRouter([
                             {
                                 index: true,
                                 element: <SkillsPage />
+                            }
+                        ]
+                    },
+                    {
+                        path: `/skill/:id`,
+                        children: [
+                            {
+                                index: true,
+                                element: <SkillPage />
                             }
                         ]
                     }

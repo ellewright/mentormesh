@@ -9,3 +9,9 @@ export async function getAllSkills() {
     const skills = response.data
     return skills
 }
+
+export async function getSkillById(id) {
+    const response = await app.get(`/skill/${id}`)
+    const skill = response.data
+    return skill
+}
