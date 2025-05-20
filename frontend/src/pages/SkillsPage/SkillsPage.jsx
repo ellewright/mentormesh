@@ -22,7 +22,7 @@ export default function SkillPage() {
     return (
         <div className={styles.list}>
             {skills.map((skill) => (
-                <SkillCard key={skill.id} title={skill.title} description={skill.description} category={skill.category} />
+                <SkillCard key={skill.id} id={skill.id} title={skill.title} description={skill.description} category={skill.category} />
             ))}
         </div>
     )
