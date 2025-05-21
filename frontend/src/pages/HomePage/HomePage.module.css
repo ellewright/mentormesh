@@ -19,6 +19,17 @@
     border-radius: 99999px;
     background-image: linear-gradient(var(--light-orange), var(--dark-orange));
     color: var(--black);
+    transition: 250ms;
+}
+
+.button:hover {
+    background: var(--light-orange);
+    transform: scale(1.05);
+}
+
+.button:active {
+    background: var(--dark-orange);
+    transform: scale(0.95);
 }
 
 .bold {

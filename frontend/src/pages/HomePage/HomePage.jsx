@@ -14,12 +14,13 @@ export default function HomePage() {
             <p>
                 Connect to a nearby professional and offer to trade skills!
             </p>
-            <Link
-                to="/skills"
-                className={styles.button}
-            >
-                Learn more
-            </Link>
+            <div>
+                <a>
+                    <Link className={styles.button} to="/skills">
+                        Learn more
+                    </Link>
+                </a>
+            </div>
         </div>
     )
 }
