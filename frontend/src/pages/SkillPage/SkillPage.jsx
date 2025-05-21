@@ -27,8 +27,10 @@ export default function SkillPage() {
 
     return (
         <div className={styles.container}>
-            <h1>{skill.title ? skill.title : ""}</h1>
-            <p>{skill.category ? `Category: ${skill.category.toUpperCase()}` : ""}</p>
+            <div className={styles.header}>
+                <h1 className={styles.title}>{skill.title ? skill.title : ""}</h1>
+                <p className={styles.category}>{skill.category ? `Category: ${skill.category.toUpperCase()}` : ""}</p>
+            </div>
             <p>{skill.description ? skill.description : ""}</p>
         </div>
     )

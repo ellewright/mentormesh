@@ -1,4 +1,25 @@
 .container {
+    background-color: var(--dark-gray);
     color: var(--white);
+    padding: 2rem 8rem 2rem 8rem;
     margin: 4rem 16rem 4rem 16rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.title {
+    color: transparent;
+    background: -webkit-linear-gradient(var(--light-orange), var(--dark-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.category {
+    color: var(--light-gray)
 }
