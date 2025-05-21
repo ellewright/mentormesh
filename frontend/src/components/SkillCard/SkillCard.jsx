@@ -4,9 +4,19 @@ import { Link } from "react-router-dom"
 export default function SkillCard({ id, title, description, category }) {
     return (
         <div className={styles.card}>
-            <p className={styles.category}>{category.toUpperCase()}</p>
-            <h1 className={styles.title}><Link to={`/skill/${id}`}>{title}</Link></h1>
-            <p className={styles.description}>{description}</p>
+            <p className={styles.category}>
+                {category.toUpperCase()}
+            </p>
+            <div className={styles.titleContainer}>
+                <h1 className={styles.title}>
+                    <Link as="h1" to={`/skill/${id}`}>
+                        {title}
+                    </Link>
+                </h1>
+            </div>
+            <p className={styles.description}>
+                {description}
+            </p>
         </div>
     )
 }

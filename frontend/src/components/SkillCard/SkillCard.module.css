@@ -11,13 +11,27 @@
     padding: 0rem 0 0 1rem;
 }
 
-.title {
-    height: 2.5em;
+.titleContainer {
+    height: 9em;
     overflow: hidden;
-    padding: 3rem 0.5rem 0 1rem;
-    background: var(--light-orange);
+    padding: 0rem 0.5rem 0 1rem;
+}
+
+.title {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-color: var(--orange);
+    transition: 250ms;
+}
+
+.title:hover {
+    background-color: var(--light-orange);
+    transform: scale(1.0125);
+}
+
+.title:active {
+    background-color: var(--dark-orange);
+    transform: scale(0.9875);
 }
 
 .description {

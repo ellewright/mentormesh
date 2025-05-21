@@ -3,8 +3,9 @@
     --dark-gray: #333;
     --light-gray: #999;
     --white: white;
-    --light-orange: oklch(82.8% 0.189 84.429);
-    --dark-orange: oklch(47.3% 0.137 46.201);
+    --light-orange: #ffba00;
+    --orange: #cb7b00;
+    --dark-orange: #973c00;
 }
 
 body {
