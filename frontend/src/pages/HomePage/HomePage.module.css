@@ -1,6 +1,6 @@
 .container {
     margin: 0 0.5rem 0 0.5rem;
-    color: white;
+    color: var(--white);
     height: 92.5vh;
     display: flex;
     flex-direction: column;
@@ -17,13 +17,13 @@
     align-items: center;
     height: 2rem;
     border-radius: 99999px;
-    background-image: linear-gradient(oklch(82.8% 0.189 84.429), oklch(47.3% 0.137 46.201));
-    color: #111;
+    background-image: linear-gradient(var(--light-orange), var(--dark-orange));
+    color: var(--black);
 }
 
 .bold {
     color: transparent;
-    background: -webkit-linear-gradient(oklch(82.8% 0.189 84.429), oklch(47.3% 0.137 46.201));
+    background: -webkit-linear-gradient(var(--light-orange), var(--dark-orange));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bolder;

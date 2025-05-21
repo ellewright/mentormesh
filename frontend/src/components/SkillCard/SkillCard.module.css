@@ -1,6 +1,6 @@
 .card {
-    background-color: #333;
-    color: white;
+    background-color: var(--dark-gray);
+    color: var(--white);
     width: 15rem;
     height: 16rem;
     padding: 1rem;
@@ -15,7 +15,7 @@
     height: 2.5em;
     overflow: hidden;
     padding: 3rem 0.5rem 0 1rem;
-    background: oklch(82.8% 0.189 84.429);
+    background: var(--light-orange);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -23,7 +23,7 @@
 .description {
     height: 2.5em;
     overflow: hidden;
-    color: #999;
+    color: var(--light-gray);
     padding-left: 1rem;
     padding-right: 0.5rem;
 }

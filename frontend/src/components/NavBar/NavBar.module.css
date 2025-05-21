@@ -6,8 +6,8 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #111;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .navbar>* {
@@ -16,7 +16,7 @@
 
 .header {
     color: transparent;
-    background: -webkit-linear-gradient(oklch(82.8% 0.189 84.429), oklch(47.3% 0.137 46.201));
+    background: -webkit-linear-gradient(var(--light-orange), var(--dark-orange));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

@@ -1,6 +1,13 @@
-:root {}
+:root {
+    --black: #111;
+    --dark-gray: #333;
+    --light-gray: #999;
+    --white: white;
+    --light-orange: oklch(82.8% 0.189 84.429);
+    --dark-orange: oklch(47.3% 0.137 46.201);
+}
 
 body {
-    background-color: #111;
+    background-color: var(--black);
     margin: 0;
 }
