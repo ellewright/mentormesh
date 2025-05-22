@@ -4,6 +4,7 @@ sys.path.append("./model")
 sys.path.append("./repository")
 
 from skill import Skill
+from skill import Category
 from skill_repository import skills
 from fastapi import HTTPException
 from fastapi import FastAPI
@@ -29,6 +30,17 @@ def get_all_skills() -> list[Skill]:
     
     for skill in skills:
         skill_list.append(skill)
+
+    return skill_list
+
+@app.get("/{category}")
+def get_skills_by_category(category: str) -> list[Skill]:
+    skill_list = []
+
+    for skill in skills:
+        category_enum = Category[category.upper()]
+        if skill.category == category_enum:
+            skill_list.append(skill)
 
     return skill_list
 
