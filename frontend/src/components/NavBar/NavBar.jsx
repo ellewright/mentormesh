@@ -1,7 +1,13 @@
 import styles from "./NavBar.module.css"
-import { Link, Outlet, useNavigation } from "react-router-dom"
+import { Link, Outlet, useNavigate, useNavigation } from "react-router-dom"
 
 export default function NavBar() {
+    const navigate = useNavigate()
+
+    function handleSubmit(e) {
+        navigate(`/${e.target.value}`)
+    }
+
     return (
         <div className={styles.navbar}>
             <h1>
@@ -13,6 +19,26 @@ export default function NavBar() {
                     A Peer-to-Peer Learning Platform
                 </span>
             </h1>
+            <form className={styles.form}>
+                <label
+                    className={styles.formLabel}
+                    htmlFor="category"
+                >
+                    Category
+                </label>
+                <select
+                    className={styles.select}
+                    name="category"
+                    id="category"
+                    onChange={(e) => handleSubmit(e)}
+                >
+                    <option value="music">Music</option>
+                    <option value="science">Science</option>
+                    <option value="math">Math</option>
+                    <option value="history">History</option>
+                    <option value="life">Life</option>
+                </select>
+            </form>
         </div>
     )
 }
