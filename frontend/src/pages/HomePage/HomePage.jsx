@@ -15,11 +15,9 @@ export default function HomePage() {
                 Connect to a nearby professional and offer to trade skills!
             </p>
             <div>
-                <a>
-                    <Link className={styles.button} to="/skills">
-                        Learn more
-                    </Link>
-                </a>
+                <Link className={styles.button} to="/skills">
+                    Learn more
+                </Link>
             </div>
         </div>
     )
