@@ -24,3 +24,25 @@
 .slogan {
     font-size: 0.60em;
 }
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.formLabel {
+    display: none;
+}
+
+.select {
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+    background-color: var(--black);
+    color: var(--light-gray);
+    border: 1px solid var(--dark-gray);
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    width: 12rem;
+}
