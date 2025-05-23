@@ -20,6 +20,22 @@
     -webkit-text-fill-color: transparent;
 }
 
+.categoryContainer {
+    color: var(--light-gray);
+    transition: 250ms;
+}
+
+.categoryContainer:hover {
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.categoryContainer:active {
+    color: var(--black);
+    transform: scale(0.95);
+}
+
 .category {
-    color: var(--light-gray)
+    text-decoration: none;
+    color: inherit;
 }
