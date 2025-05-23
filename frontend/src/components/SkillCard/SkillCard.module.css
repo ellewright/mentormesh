@@ -7,8 +7,24 @@
     border-radius: 0.25rem;
 }
 
+.categoryContainer {
+    padding-left: 1rem;
+    width: fit-content;
+    display: flex;
+    transition: 250ms;
+}
+
 .category {
-    padding: 0rem 0 0 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.categoryContainer:hover {
+    transform: scale(1.125);
+}
+
+.categoryContainer:active {
+    transform: scale(0.875);
 }
 
 .titleContainer {

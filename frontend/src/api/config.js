@@ -10,6 +10,16 @@ export async function getAllSkills() {
     return skills
 }
 
+export async function getSkillsByCategory(category) {
+    if (!category) {
+        throw new Error("Cannot find that category.")
+    }
+
+    const response = await app.get(`/${category}`)
+    const skills = response.data
+    return skills
+}
+
 export async function getSkillById(id) {
     const response = await app.get(`/skill/${id}`)
     const skill = response.data
