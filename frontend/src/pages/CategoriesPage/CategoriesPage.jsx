@@ -11,7 +11,6 @@ export default function CategoriesPage() {
     useEffect(() => {
         const requestSkills = async (category) => {
             try {
-                console.log(category)
                 const requestedSkills = await getSkillsByCategory(category)
                 setSkills(requestedSkills)
             } catch (e) {
