@@ -4,6 +4,7 @@ import SkillsPage from "../pages/SkillsPage/SkillsPage";
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
 import SkillPage from "../pages/SkillPage/SkillPage";
+import CategoriesPage from "../pages/CategoriesPage/CategoriesPage";
 
 export const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
                                 element: <SkillsPage />
                             }
                         ]
+                    },
+                    {
+                        path: "/:category",
+                        element: <CategoriesPage />
                     },
                     {
                         path: `/skill/:id`,
