@@ -1,7 +1,7 @@
 # MentorMesh
 ## A Peer-to-Peer Learning Platform
 
-Need a job done, but short on cash? Looking to grow or share your talents? Look no further than MentorMesh. This project is a full-stack application with the intention to showcasing a new form of freelance work, where vendors offer their skills in exchange for others' skills. This project contains a frontend created using Vite + ReactJS and a backend using Python + FastAPI. This project is not at a complete state, but it will ultimately provide functionality for the following:
+Need a job done, but short on cash? Looking to grow or share your talents? Look no further than MentorMesh. This project is a full-stack application with the intention of showcasing a new form of freelance work, where vendors offer their skills in exchange for others' skills. This project contains a frontend created using Vite + ReactJS and a backend using Python + FastAPI. This project is not at a complete state, but it will ultimately provide functionality for the following:
 
 * Browsing offered Skills
 * Creating a User profile
