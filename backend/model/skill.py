@@ -10,6 +10,7 @@ class Category(Enum):
 
 class Skill(BaseModel):
     id: int
+    mentor: int
     category: Category
     title: str
     description: str

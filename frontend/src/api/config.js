@@ -5,7 +5,7 @@ const app = axios.create({
 })
 
 export async function getAllSkills() {
-    const response = await app.get("/")
+    const response = await app.get("/skills")
     const skills = response.data
     return skills
 }
@@ -15,7 +15,7 @@ export async function getSkillsByCategory(category) {
         throw new Error("Cannot find that category.")
     }
 
-    const response = await app.get(`/${category}`)
+    const response = await app.get(`/skills/${category}`)
     const skills = response.data
     return skills
 }
