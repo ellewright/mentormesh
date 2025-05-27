@@ -58,3 +58,11 @@ def get_all_mentors() -> list[Mentor]:
         mentor_list.append(mentor)
 
     return mentor_list
+
+@app.get("/mentor/{mentor_id}")
+def get_mentor_by_id(mentor_id: int) -> Mentor:
+    for mentor in mentors:
+        if mentor_id == mentor.id:
+            return mentor
+        
+    raise HTTPException(status_code=404, detail=f"Could not find mentor with id {mentor_id}.")

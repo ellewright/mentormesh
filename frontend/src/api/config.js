@@ -25,3 +25,9 @@ export async function getSkillById(id) {
     const skill = response.data
     return skill
 }
+
+export async function getMentorById(id) {
+    const response = await app.get(`/mentor/${id}`)
+    const mentor = response.data
+    return mentor
+}
