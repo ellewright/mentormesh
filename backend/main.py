@@ -1,11 +1,9 @@
 import sys
-
-sys.path.append("./model")
-sys.path.append("./repository")
-
-from skill import Skill
-from skill import Category
-from skill_repository import skills
+from model.mentor import Mentor
+from model.skill import Skill
+from model.skill import Category
+from repository.skill_repository import skills
+from repository.mentor_repository import mentors
 from fastapi import HTTPException
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -14,7 +12,6 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173",
-    "http://localhost:5173/science"
 ]
 
 app.add_middleware(
@@ -25,7 +22,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
+@app.get("/skills")
 def get_all_skills() -> list[Skill]:
     skill_list = []
     
@@ -34,7 +31,7 @@ def get_all_skills() -> list[Skill]:
 
     return skill_list
 
-@app.get("/{category}")
+@app.get("/skills/{category}")
 def get_skills_by_category(category: str) -> list[Skill]:
     skill_list = []
 
@@ -52,3 +49,20 @@ def get_skill_by_id(skill_id: int) -> Skill:
             return skill
         
     raise HTTPException(status_code=404, detail=f"Could not find skill with id {skill_id}.")
+
+@app.get("/mentors")
+def get_all_mentors() -> list[Mentor]:
+    mentor_list = []
+
+    for mentor in mentors:
+        mentor_list.append(mentor)
+
+    return mentor_list
+
+@app.get("/mentor/{mentor_id}")
+def get_mentor_by_id(mentor_id: int) -> Mentor:
+    for mentor in mentors:
+        if mentor_id == mentor.id:
+            return mentor
+        
+    raise HTTPException(status_code=404, detail=f"Could not find mentor with id {mentor_id}.")
