@@ -1,22 +1,35 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    position: sticky;
-    height: 7.5vh;
-    width: 100%;
-    top: 0;
-    left: 0;
     background-color: var(--black);
     color: var(--white);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    align-items: center;
 }
 
 .navbar>* {
     margin-left: 0.5rem;
 }
 
+.logo {
+    height: 2.5rem;
+    transition: 250ms;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo:active {
+    transform: scale(0.95);
+}
+
 .header {
-    color: transparent;
     background: -webkit-linear-gradient(var(--light-orange), var(--dark-orange));
+    color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -37,14 +50,14 @@
 }
 
 .select {
-    padding-left: 0.5rem;
-    font-size: 1.25rem;
     background-color: var(--black);
     color: var(--light-gray);
+    width: 12rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
     border: 1px solid var(--dark-gray);
     border-radius: 0.25rem;
-    height: 2.5rem;
-    width: 12rem;
+    padding-left: 0.5rem;
 }
 
 .outlet {

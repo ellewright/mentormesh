@@ -1,4 +1,5 @@
 import styles from "./NavBar.module.css"
+import book from "../../../public/book.png"
 import { Link, Outlet, useNavigate, useNavigation } from "react-router-dom"
 
 export default function NavBar() {
@@ -10,11 +11,18 @@ export default function NavBar() {
 
     return (
         <div className={styles.navbar}>
+            <Link to="/skills">
+                <img
+                    src={book}
+                    className={styles.logo}
+                    alt="MentorMesh logo."
+                />
+            </Link>
             <h1>
                 <span className={styles.header}>
-                    <Link to="/skills">
-                        MentorMesh
-                    </Link>
+
+                    MentorMesh
+
                 </span> : <span className={styles.slogan}>
                     A Peer-to-Peer Learning Platform
                 </span>
