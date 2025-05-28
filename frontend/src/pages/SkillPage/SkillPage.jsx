@@ -39,9 +39,13 @@ export default function SkillPage() {
         <div className={styles.container}>
             <div className={styles.header}>
                 <h1 className={styles.title}>{skill.title ? skill.title : ""}</h1>
-                <p>{mentor.username}</p>
+                <p>
+                    <Link to={`/${mentor.username}`} className={styles.category}>
+                        {mentor.username}
+                    </Link>
+                </p>
                 <p className={styles.categoryContainer}>
-                    <Link to={`/${skill.category}`} className={styles.category}>
+                    <Link to={`/skills/${skill.category}`} className={styles.category}>
                         {skill.category ? `${skill.category.toUpperCase()}` : ""}
                     </Link>
                 </p>

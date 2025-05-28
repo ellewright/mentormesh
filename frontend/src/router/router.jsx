@@ -5,6 +5,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
 import SkillPage from "../pages/SkillPage/SkillPage";
 import CategoriesPage from "../pages/CategoriesPage/CategoriesPage";
+import MentorPage from "../pages/MentorPage/MentorPage";
 
 export const router = createBrowserRouter([
     {
@@ -19,6 +20,15 @@ export const router = createBrowserRouter([
                         element: <HomePage />
                     },
                     {
+                        path: `/:username`,
+                        children: [
+                            {
+                                index: true,
+                                element: <MentorPage />
+                            }
+                        ]
+                    },
+                    {
                         path: "/skills",
                         children: [
                             {
@@ -28,8 +38,13 @@ export const router = createBrowserRouter([
                         ]
                     },
                     {
-                        path: "/:category",
-                        element: <CategoriesPage />
+                        path: "/skills/:category",
+                        children: [
+                            {
+                                index: true,
+                                element: <CategoriesPage />
+                            }
+                        ]
                     },
                     {
                         path: `/skill/:id`,

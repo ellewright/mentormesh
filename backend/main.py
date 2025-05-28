@@ -59,10 +59,28 @@ def get_all_mentors() -> list[Mentor]:
 
     return mentor_list
 
-@app.get("/mentor/{mentor_id}")
+@app.get("/mentor/id/{mentor_id}")
 def get_mentor_by_id(mentor_id: int) -> Mentor:
     for mentor in mentors:
         if mentor_id == mentor.id:
             return mentor
         
     raise HTTPException(status_code=404, detail=f"Could not find mentor with id {mentor_id}.")
+
+@app.get("/mentor/{username}")
+def get_mentor_by_username(username: str) -> Mentor:
+    for mentor in mentors:
+        if username == mentor.username:
+            return mentor
+        
+    raise HTTPException(status_code=404, detail=f"Could not find mentor with username {username}.")
+
+@app.get("/mentor/skills/{mentor_id}")
+def get_skills_by_mentor(mentor_id: int) -> list[Skill]:
+    skill_list = []
+
+    for skill in skills:
+        if mentor_id == skill.mentor:
+            skill_list.append(skill)
+
+    return skill_list
