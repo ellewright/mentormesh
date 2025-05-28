@@ -1,7 +1,7 @@
 .container {
-    margin: 0 0.5rem 0 0.5rem;
     color: var(--white);
     height: 92.5vh;
+    margin: 0 0.5rem 0 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,16 +9,16 @@
 }
 
 .button {
-    margin-top: 1rem;
-    padding: 0.25em 1em 0.25em 1em;
-    text-decoration: none;
+    background-image: linear-gradient(var(--light-orange), var(--dark-orange));
+    color: var(--black);
+    height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2rem;
     border-radius: 99999px;
-    background-image: linear-gradient(var(--light-orange), var(--dark-orange));
-    color: var(--black);
+    padding: 0.25em 1em 0.25em 1em;
+    margin-top: 1rem;
+    text-decoration: none;
     transition: 250ms;
 }
 
@@ -33,8 +33,8 @@
 }
 
 .bold {
-    color: transparent;
     background: -webkit-linear-gradient(var(--light-orange), var(--dark-orange));
+    color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bolder;
