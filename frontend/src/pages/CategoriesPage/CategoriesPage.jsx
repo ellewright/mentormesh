@@ -22,10 +22,15 @@ export default function CategoriesPage() {
     }, [category])
 
     return (
-        <div className={styles.list}>
-            {skills.map((skill) => (
-                <SkillCard key={skill.id} id={skill.id} title={skill.title} description={skill.description} category={skill.category} />
-            ))}
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <h1 className={styles.title}>{category.toUpperCase()}</h1>
+            </div>
+            <div className={styles.list}>
+                {skills.map((skill) => (
+                    <SkillCard key={skill.id} id={skill.id} title={skill.title} description={skill.description} category={skill.category} />
+                ))}
+            </div>
         </div>
     )
 }
