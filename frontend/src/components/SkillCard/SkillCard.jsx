@@ -5,7 +5,7 @@ export default function SkillCard({ id, title, description, category }) {
     return (
         <div className={styles.card}>
             <p className={styles.categoryContainer}>
-                <Link to={`/${category}`} className={styles.category}>
+                <Link to={`/skills/${category}`} className={styles.category}>
                     {category.toUpperCase()}
                 </Link>
             </p>

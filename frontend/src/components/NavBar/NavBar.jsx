@@ -5,7 +5,7 @@ export default function NavBar() {
     const navigate = useNavigate()
 
     function handleSubmit(e) {
-        navigate(`/${e.target.value}`)
+        navigate(`/skills/${e.target.value}`)
     }
 
     return (
