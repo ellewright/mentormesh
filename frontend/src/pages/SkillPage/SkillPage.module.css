@@ -1,55 +1,91 @@
 .container {
+    color: var(--white);
     width: 60rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--white);
 }
 
 .header {
-    width: 100%;
     background-color: var(--dark-gray);
-    border-radius: 0.25rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 0.25rem;
     margin-bottom: 2.5rem;
 }
 
-.title {
-    color: transparent;
-    background-color: var(--light-orange);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.details {
+    color: var(--light-gray);
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.body {
-    background-color: var(--dark-gray);
+.details>* {
+    background-color: var(--black);
+    height: 2rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-}
-
-.categoryContainer {
-    color: var(--light-gray);
+    border-radius: 99999px;
+    padding: 0rem 1rem;
     transition: 250ms;
 }
 
-.categoryContainer:hover {
-    color: var(--white);
+.details>*:hover {
     transform: scale(1.05);
 }
 
-.categoryContainer:active {
-    color: var(--black);
+.details>*:active {
+    transform: scale(0.95);
+}
+
+.details>p>*:hover {
+    color: var(--white);
+}
+
+.details>p>*:active {
+    color: var(--dark-gray);
     transform: scale(0.95);
 }
 
 .category {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
+}
+
+.title {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: var(--orange);
+    color: transparent;
+    height: 3rem;
+    border-radius: 0;
+    padding: 0;
+    transition: 250ms;
+}
+
+.title:hover {
+    background-color: var(--light-orange);
+    transform: scale(1.05);
+}
+
+.title:active {
+    background-color: var(--dark-orange);
+    transform: scale(0.9875);
+}
+
+.body {
+    background-color: var(--dark-gray);
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
+.body>p {
+    padding: 0 1.5rem 0 1.5rem;
 }
