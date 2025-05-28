@@ -53,7 +53,7 @@ export function NavLayout() {
             {isLoading &&
                 <div className={styles.spinner} />
             }
-            <div className={styles.container + (isLoading ? "loading" : "")}>
+            <div className={styles.outlet + (isLoading ? "loading" : "")}>
                 <Outlet />
             </div>
         </>

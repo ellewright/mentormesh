@@ -4,10 +4,7 @@ import SkillsPage from './pages/SkillsPage/SkillsPage'
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <SkillsPage />
-    </>
+    <></>
   )
 }
 

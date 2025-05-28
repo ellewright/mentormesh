@@ -46,3 +46,11 @@
     height: 2.5rem;
     width: 12rem;
 }
+
+.outlet {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
