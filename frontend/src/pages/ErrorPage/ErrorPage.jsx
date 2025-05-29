@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom"
-import book from "../../../public/book.png"
+import book from "../../assets/book.png"
 import styles from "./ErrorPage.module.css"
 
 export default function ErrorPage() {

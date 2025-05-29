@@ -1,5 +1,5 @@
 import styles from "./NavBar.module.css"
-import book from "../../../public/book.png"
+import book from "../../assets/book.png"
 import { Link, Outlet, useNavigate, useNavigation } from "react-router-dom"
 
 export default function NavBar() {
