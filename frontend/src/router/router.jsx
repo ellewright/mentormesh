@@ -1,4 +1,3 @@
-import { NavLayout } from "../components/NavBar/NavBar";
 import SkillsPage from "../pages/SkillsPage/SkillsPage";
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
@@ -6,6 +5,7 @@ import SkillPage from "../pages/SkillPage/SkillPage";
 import CategoriesPage from "../pages/CategoriesPage/CategoriesPage";
 import MentorPage from "../pages/MentorPage/MentorPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import NavLayout from "../components/Nav/NavLayout/NavLayout";
 
 export const router = createBrowserRouter([
     {

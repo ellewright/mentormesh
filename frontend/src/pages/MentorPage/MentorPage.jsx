@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import styles from "./MentorPage.module.css"
 import { useEffect, useState } from "react"
 import { getMentorByUsername, getSkillsByMentor } from "../../api/config"
-import SkillCard from "../../components/SkillCard/SkillCard"
+import SkillCard from "../../components/Skill/SkillCard/SkillCard"
 
 export default function MentorPage() {
     const { username } = useParams()

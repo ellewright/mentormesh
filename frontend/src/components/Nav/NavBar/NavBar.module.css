@@ -60,11 +60,3 @@
     border-radius: 0.25rem;
     padding-left: 0.5rem;
 }
-
-.outlet {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}

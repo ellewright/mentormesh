@@ -1,5 +1,5 @@
 import styles from "./NavBar.module.css"
-import book from "../../assets/book.png"
+import book from "../../../assets/book.png"
 import { Link, Outlet, useNavigate, useNavigation } from "react-router-dom"
 
 export default function NavBar() {
@@ -48,22 +48,5 @@ export default function NavBar() {
                 </select>
             </form>
         </div>
-    )
-}
-
-export function NavLayout() {
-    const { state } = useNavigation()
-    const isLoading = state === "loading"
-
-    return (
-        <>
-            <NavBar />
-            {isLoading &&
-                <div className={styles.spinner} />
-            }
-            <div className={styles.outlet + (isLoading ? "loading" : "")}>
-                <Outlet />
-            </div>
-        </>
     )
 }

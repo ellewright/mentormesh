@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import styles from "./CategoriesPage.module.css"
 import { getSkillsByCategory } from "../../api/config"
 import { useParams } from "react-router-dom"
-import SkillCard from "../../components/SkillCard/SkillCard"
+import SkillCard from "../../components/Skill/SkillCard/SkillCard"
 
 export default function CategoriesPage() {
     const { category } = useParams()

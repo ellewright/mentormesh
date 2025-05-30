@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { getAllSkills } from "../../api/config"
-import SkillCard from "../../components/SkillCard/SkillCard"
+import SkillCard from "../../components/Skill/SkillCard/SkillCard"
 import styles from "./SkillsPage.module.css"
 
 export default function SkillPage() {
