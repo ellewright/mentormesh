@@ -55,7 +55,7 @@ export default function SkillPage() {
             <div className={styles.body}>
                 <p>{skill.description ? skill.description : ""}</p>
             </div>
-            <a className={styles.footer}>
+            <a className={styles.footer} href={`/offer/${skill.id}`}>
                 <div>
                     Make an offer
                 </div>

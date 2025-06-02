@@ -6,6 +6,7 @@ import CategoriesPage from "../pages/CategoriesPage/CategoriesPage";
 import MentorPage from "../pages/MentorPage/MentorPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import NavLayout from "../components/Nav/NavLayout/NavLayout";
+import OfferPage from "../pages/OfferPage/OfferPage";
 
 export const router = createBrowserRouter([
     {
@@ -52,6 +53,15 @@ export const router = createBrowserRouter([
                             {
                                 index: true,
                                 element: <SkillPage />
+                            }
+                        ]
+                    },
+                    {
+                        path: "/offer/:skillId",
+                        children: [
+                            {
+                                index: true,
+                                element: <OfferPage />
                             }
                         ]
                     }
