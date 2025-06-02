@@ -23,6 +23,7 @@
     background-color: var(--orange);
     color: transparent;
     transition: 250ms;
+    cursor: pointer;
 }
 
 .title:hover {

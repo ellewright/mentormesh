@@ -20,6 +20,16 @@
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.errorMessage:hover {
+    transform: scale(1.05);
+}
+
+.errorMessage:active {
+    transform: scale(0.95);
 }
 
 .stackTrace {
@@ -30,4 +40,14 @@
 
 .logo {
     height: 6rem;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo:active {
+    transform: scale(0.95);
 }

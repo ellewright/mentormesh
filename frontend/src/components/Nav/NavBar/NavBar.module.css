@@ -60,4 +60,5 @@
     border: 1px solid var(--dark-gray);
     border-radius: 0.25rem;
     padding-left: 0.5rem;
+    cursor: pointer;
 }
