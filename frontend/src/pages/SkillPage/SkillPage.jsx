@@ -50,13 +50,16 @@ export default function SkillPage() {
                             {skill.category ? `${skill.category.toUpperCase()}` : ""}
                         </Link>
                     </p>
-
                 </div>
-
             </div>
             <div className={styles.body}>
                 <p>{skill.description ? skill.description : ""}</p>
             </div>
+            <a className={styles.footer}>
+                <div>
+                    Make an offer
+                </div>
+            </a>
         </div>
     )
 }

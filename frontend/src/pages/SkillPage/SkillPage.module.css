@@ -89,3 +89,29 @@
 .body>p {
     padding: 0 1.5rem 0 1.5rem;
 }
+
+.footer {
+    background-image: linear-gradient(to top, var(--light-orange), var(--dark-orange));
+    width: 20%;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    margin-top: 2rem;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.footer:hover {
+    transform: scale(1.05);
+}
+
+.footer:active {
+    transform: scale(0.95);
+}
+
+.footer>div {
+    color: var(--dark-gray);
+}
