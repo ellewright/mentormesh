@@ -1,7 +1,10 @@
 import sys
+from model.request import Request
+from model.request import Status
 from model.mentor import Mentor
 from model.skill import Skill
 from model.skill import Category
+from repository.request_repository import requests
 from repository.skill_repository import skills
 from repository.mentor_repository import mentors
 from fastapi import HTTPException
@@ -21,6 +24,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Skills
 
 @app.get("/skills")
 def get_all_skills() -> list[Skill]:
@@ -49,6 +54,8 @@ def get_skill_by_id(skill_id: int) -> Skill:
             return skill
         
     raise HTTPException(status_code=404, detail=f"Could not find skill with id {skill_id}.")
+
+# Mentors
 
 @app.get("/mentors")
 def get_all_mentors() -> list[Mentor]:
@@ -84,3 +91,38 @@ def get_skills_by_mentor(mentor_id: int) -> list[Skill]:
             skill_list.append(skill)
 
     return skill_list
+
+# Requests
+
+@app.get("/requests")
+def get_all_requests() -> list[Request]:
+    request_list = []
+
+    for request in requests:
+        request_list.append(request)
+
+    return request_list
+
+@app.get("/requests/{request_id}")
+def get_request_by_id(request_id: int) -> Request:
+    for request in requests:
+        if request.id == request_id:
+            return request
+        
+    raise HTTPException(status_code=404, detail=f"Could not find request with id {request_id}.")
+
+@app.get("/requests/sender/{sender_id}")
+def get_request_by_id(sender_id: int) -> Request:
+    for request in requests:
+        if request.sender_id == sender_id:
+            return request
+        
+    raise HTTPException(status_code=404, detail=f"Could not find request with sender id {sender_id}.")
+
+@app.get("/requests/receiver/{receiver_id}")
+def get_request_by_id(receiver_id: int) -> Request:
+    for request in requests:
+        if request.receiver_id == receiver_id:
+            return request
+        
+    raise HTTPException(status_code=404, detail=f"Could not find request with receiver id {receiver_id}.")
