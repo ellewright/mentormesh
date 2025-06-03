@@ -2,10 +2,12 @@ import { useEffect, useState } from "react"
 import styles from "./OfferPage.module.css"
 import { getAllSkills, getSkillById } from "../../api/config"
 import { useParams } from "react-router-dom"
-import OfferSuccessModal from "../../components/Offer/OfferSuccessModal/OfferSuccessModal"
+import OfferRequestSuccessModal from "../../components/Offer/Requests/OfferRequestSuccessModal/OfferRequestSuccessModal"
+import OfferRequestFailureModal from "../../components/Offer/Requests/OfferRequestFailureModal/OfferRequestFailureModal"
 
 export default function OfferPage() {
     const [isSuccessful, setIsSuccessful] = useState(false)
+    const [isFailure, setIsFailure] = useState(false)
     const { skillId } = useParams()
     const [offeredSkill, setOfferedSkill] = useState({
         id: null,
@@ -33,7 +35,20 @@ export default function OfferPage() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        setIsSuccessful(true)
+
+        // Ultimately, here we will determine whether or not two skills
+        // are valid to trade and send a request to the Mentor.
+        // At the moment, there is no real Mentor database, so for now,
+        // this method simply chooses to succeed or fail the request at
+        // random, to test both cases.
+
+        const success = Math.round(Math.random())
+
+        if (success) {
+            setIsSuccessful(true)
+        } else {
+            setIsFailure(true)
+        }
     }
 
     return (
@@ -54,7 +69,8 @@ export default function OfferPage() {
                     <button>Offer</button>
                 </form>
             </div>
-            {isSuccessful && <OfferSuccessModal setIsOpen={setIsSuccessful} />}
+            {isSuccessful && <OfferRequestSuccessModal setIsOpen={setIsSuccessful} />}
+            {isFailure && <OfferRequestFailureModal setIsOpen={setIsFailure} />}
         </div>
     )
 }

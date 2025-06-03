@@ -1,6 +1,6 @@
-import styles from "./OfferSuccessModal.module.css"
+import styles from "./OfferRequestFailureModal.module.css"
 
-export default function OfferSuccessModal({ setIsOpen }) {
+export default function OfferRequestFailureModal({ setIsOpen }) {
     return (
         <>
             <div className={styles.darkBG} onClick={() => setIsOpen(false)} />
@@ -8,11 +8,11 @@ export default function OfferSuccessModal({ setIsOpen }) {
                 <div className={styles.modal}>
                     <div className={styles.modalHeader}>
                         <h5 className={styles.heading}>
-                            Success!
+                            Failure!
                         </h5>
                     </div>
                     <div className={styles.modalContent}>
-                        Trade completed.
+                        Trade not completed.
                     </div>
                     <div className={styles.modalActions}>
                         <div className={styles.actionsContainer}>
