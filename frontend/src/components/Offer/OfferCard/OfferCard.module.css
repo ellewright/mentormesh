@@ -1,0 +1,7 @@
+.container {
+    background-color: var(--dark-gray);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 44% 22%;
+    padding-left: 2rem;
+}

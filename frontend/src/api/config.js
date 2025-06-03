@@ -4,6 +4,8 @@ const app = axios.create({
     baseURL: import.meta.env.VITE_BASE_URL
 })
 
+// Skills
+
 export async function getAllSkills() {
     const response = await app.get("/skills")
     const skills = response.data
@@ -26,6 +28,8 @@ export async function getSkillById(id) {
     return skill
 }
 
+// Mentors
+
 export async function getMentorById(id) {
     const response = await app.get(`/mentor/id/${id}`)
     const mentor = response.data
@@ -42,4 +46,18 @@ export async function getSkillsByMentor(id) {
     const response = await app.get(`mentor/skills/${id}`)
     const skills = response.data
     return skills
+}
+
+// Requests
+
+export async function getRequestsBySenderId(senderId) {
+    const response = await app.get(`requests/sender/${senderId}`)
+    const requests = response.data
+    return requests
+}
+
+export async function getRequestsByReceiverId(receiverId) {
+    const response = await app.get(`requests/receiver/${receiverId}`)
+    const requests = response.data
+    return requests
 }

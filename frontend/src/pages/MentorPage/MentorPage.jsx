@@ -1,24 +1,31 @@
 import { useParams } from "react-router-dom"
 import styles from "./MentorPage.module.css"
 import { useEffect, useState } from "react"
-import { getMentorByUsername, getSkillsByMentor } from "../../api/config"
+import { getMentorByUsername, getRequestsByReceiverId, getRequestsBySenderId, getSkillsByMentor } from "../../api/config"
 import SkillCard from "../../components/Skill/SkillCard/SkillCard"
+import OfferCard from "../../components/Offer/OfferCard/OfferCard"
 
 export default function MentorPage() {
     const { username } = useParams()
-    const [skills, setSkills] = useState([])
     const [mentor, setMentor] = useState({
         id: null,
         username: ""
     })
+    const [skills, setSkills] = useState([])
+    const [offers, setOffers] = useState([])
+    const [requests, setRequests] = useState([])
 
     useEffect(() => {
         async function fetchMentor(username) {
             try {
                 const requestedMentor = await getMentorByUsername(username)
                 const requestedSkills = await getSkillsByMentor(requestedMentor.id)
+                const requestedOffers = await getRequestsByReceiverId(requestedMentor.id)
+                const requestedRequests = await getRequestsBySenderId(requestedMentor.id)
                 setMentor(requestedMentor)
                 setSkills(requestedSkills)
+                setOffers(requestedOffers)
+                setRequests(requestedRequests)
             } catch (e) {
                 console.error(`Error fetching mentor with the username ${username}.`)
             }
@@ -37,6 +44,20 @@ export default function MentorPage() {
                     <SkillCard key={skill.id} id={skill.id} title={skill.title} description={skill.description} category={skill.category} />
                 ))}
             </div>
+            <div>
+                <h1>Offers</h1>
+            </div>
+            {offers.map((offer) => (
+                <OfferCard key={offer.id} offer={offer} />
+            ))}
+            <div>
+                <h1>Requests</h1>
+            </div>
+            {
+                requests.map((request) => (
+                    <OfferCard key={request.id} offer={request} />
+                ))
+            }
         </div>
     )
 }

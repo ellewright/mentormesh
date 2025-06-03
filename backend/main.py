@@ -112,17 +112,21 @@ def get_request_by_id(request_id: int) -> Request:
     raise HTTPException(status_code=404, detail=f"Could not find request with id {request_id}.")
 
 @app.get("/requests/sender/{sender_id}")
-def get_request_by_id(sender_id: int) -> Request:
+def get_request_by_id(sender_id: int) -> list[Request]:
+    requests_list = []
+
     for request in requests:
         if request.sender_id == sender_id:
-            return request
+            requests_list.append(request)
         
-    raise HTTPException(status_code=404, detail=f"Could not find request with sender id {sender_id}.")
+    return requests_list
 
 @app.get("/requests/receiver/{receiver_id}")
-def get_request_by_id(receiver_id: int) -> Request:
+def get_request_by_id(receiver_id: int) -> list[Request]:
+    requests_list = []
+
     for request in requests:
         if request.receiver_id == receiver_id:
-            return request
+            requests_list.append(request)
         
-    raise HTTPException(status_code=404, detail=f"Could not find request with receiver id {receiver_id}.")
+    return requests_list
