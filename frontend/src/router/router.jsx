@@ -7,7 +7,6 @@ import MentorPage from "../pages/MentorPage/MentorPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import NavLayout from "../components/Nav/NavLayout/NavLayout";
 import OfferPage from "../pages/OfferPage/OfferPage";
-import OfferSuccessModal from "../components/Offer/OfferSuccessModal/OfferSuccessModal";
 
 export const router = createBrowserRouter([
     {
@@ -19,7 +18,7 @@ export const router = createBrowserRouter([
                 children: [
                     {
                         path: "/",
-                        element: <OfferSuccessModal /> // switch back to HomePage
+                        element: <HomePage />
                     },
                     {
                         path: `/:username`,
