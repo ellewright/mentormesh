@@ -2,8 +2,10 @@ import { useEffect, useState } from "react"
 import styles from "./OfferPage.module.css"
 import { getAllSkills, getSkillById } from "../../api/config"
 import { useParams } from "react-router-dom"
+import OfferSuccessModal from "../../components/Offer/OfferSuccessModal/OfferSuccessModal"
 
 export default function OfferPage() {
+    const [isSuccessful, setIsSuccessful] = useState(false)
     const { skillId } = useParams()
     const [offeredSkill, setOfferedSkill] = useState({
         id: null,
@@ -29,13 +31,18 @@ export default function OfferPage() {
         getOfferableSkills()
     }, [])
 
+    function handleSubmit(e) {
+        e.preventDefault()
+        setIsSuccessful(true)
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.header}>
                 <h1 className={styles.title}>{offeredSkill.title}</h1>
             </div>
             <div className={styles.body}>
-                <form className={styles.form}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                     <label>
                         Options to trade:
                     </label>
@@ -47,6 +54,7 @@ export default function OfferPage() {
                     <button>Offer</button>
                 </form>
             </div>
+            {isSuccessful && <OfferSuccessModal setIsOpen={setIsSuccessful} />}
         </div>
     )
 }

@@ -2,8 +2,10 @@ import { useEffect, useState } from "react"
 import styles from "./SkillPage.module.css"
 import { getMentorById, getSkillById } from "../../api/config"
 import { Link, useParams } from "react-router-dom"
+import OfferSuccessModal from "../../components/Offer/OfferSuccessModal/OfferSuccessModal"
 
 export default function SkillPage() {
+    const [isOpen, setIsOpen] = useState(false)
     const { id } = useParams()
     const [skill, setSkill] = useState({
         id: null,
@@ -60,6 +62,7 @@ export default function SkillPage() {
                     Make an offer
                 </div>
             </a>
+            {isOpen && <OfferSuccessModal setIsOpen={setIsOpen} />}
         </div>
     )
 }
