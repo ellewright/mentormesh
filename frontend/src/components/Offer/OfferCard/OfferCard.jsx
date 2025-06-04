@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import styles from "./OfferCard.module.css"
 import { getMentorById, getSkillById } from "../../../api/config"
+import { Link } from "react-router-dom"
 
 export default function OfferCard({ offer }) {
     const [sender, setSender] = useState({
@@ -49,16 +50,37 @@ export default function OfferCard({ offer }) {
     return (
         <div className={styles.container}>
             <div className={styles.receiver}>
-                <p>{receiver.username}'s skill</p>
-                <h1>{receiverSkill.title}</h1>
+                <p className={`${styles.usernameContainer} ${styles.username}`}>
+                    {receiver.username}'s skill
+                </p>
+                <h1 className={styles.skillTitle}>
+                    {receiverSkill.title}
+                </h1>
             </div>
             <div className={styles.sender}>
-                <p>{sender.username}'s skill</p>
-                <h1>{senderSkill.title}</h1>
+                <p className={styles.usernameContainer}>
+                    <Link to={`/${sender.username}`} className={styles.username}>
+                        {sender.username}'s skill
+                    </Link>
+                </p>
+                <h1 className={styles.skillTitleContainer}>
+                    <Link to={`/skill/${senderSkill.id}`} className={styles.skillTitle}>
+                        {senderSkill.title}
+                    </Link>
+                </h1>
             </div>
             <div className={styles.status}>
-                <p>Status</p>
-                <h1>{offer.status.toUpperCase()}</h1>
+                <p>
+                    Status
+                </p>
+                <h1 className={
+                    offer.status === "rejected" ? styles.rejected
+                        : offer.status === "approved" ? styles.approved
+                            : styles.pending
+                }
+                >
+                    {offer.status.toUpperCase()}
+                </h1>
             </div>
         </div>
     )

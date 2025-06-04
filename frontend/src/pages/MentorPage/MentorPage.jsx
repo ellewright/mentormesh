@@ -47,17 +47,23 @@ export default function MentorPage() {
             <div>
                 <h1>Offers</h1>
             </div>
-            {offers.map((offer) => (
-                <OfferCard key={offer.id} offer={offer} />
-            ))}
+            <div className={styles.offers}>
+                {
+                    offers.map((offer) => (
+                        <OfferCard key={offer.id} offer={offer} />
+                    ))
+                }
+            </div>
             <div>
                 <h1>Requests</h1>
             </div>
-            {
-                requests.map((request) => (
-                    <OfferCard key={request.id} offer={request} />
-                ))
-            }
+            <div className={styles.offers}>
+                {
+                    requests.map((request) => (
+                        <OfferCard key={request.id} offer={request} />
+                    ))
+                }
+            </div>
         </div>
     )
 }

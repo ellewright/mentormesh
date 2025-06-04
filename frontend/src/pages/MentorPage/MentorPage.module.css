@@ -42,3 +42,15 @@
     row-gap: 2rem;
     column-gap: 2rem;
 }
+
+.offers {
+    width: 100%;
+}
+
+.offers>* {
+    margin-bottom: 1rem;
+}
+
+.offers>*:last-child {
+    margin-bottom: 0;
+}

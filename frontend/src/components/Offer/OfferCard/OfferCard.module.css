@@ -5,3 +5,51 @@
     grid-template-columns: 33% 44% 22%;
     padding-left: 2rem;
 }
+
+.usernameContainer {
+    width: fit-content;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.username {
+    color: white;
+    text-decoration: none;
+}
+
+.usernameContainer:hover {
+    transform: scale(1.025);
+}
+
+.usernameContainer:active {
+    transform: scale(0.975);
+}
+
+.skillTitle {
+    color: var(--orange);
+    text-decoration: none;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.skillTitle:hover {
+    color: var(--light-orange);
+    transform: scale(1.0125);
+}
+
+.skillTitle:active {
+    color: var(--dark-orange);
+    transform: scale(0.9875);
+}
+
+.approved {
+    color: var(--green);
+}
+
+.rejected {
+    color: var(--red);
+}
+
+.pending {
+    color: var(--light-gray);
+}

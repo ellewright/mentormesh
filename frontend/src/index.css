@@ -5,9 +5,11 @@
     --dark-gray: #333;
     --light-gray: #999;
     --white: white;
+    --red: #fb2c36;
     --light-orange: #ffba00;
     --orange: #cb7b00;
     --dark-orange: #973c00;
+    --green: #00c951;
 }
 
 body {
