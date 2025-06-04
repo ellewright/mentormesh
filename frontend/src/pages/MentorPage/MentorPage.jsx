@@ -45,7 +45,7 @@ export default function MentorPage() {
                 ))}
             </div>
             <div>
-                <h1>Offers</h1>
+                <h1 className={styles.subheader}>Offers</h1>
             </div>
             <div className={styles.offers}>
                 {
@@ -55,7 +55,7 @@ export default function MentorPage() {
                 }
             </div>
             <div>
-                <h1>Requests</h1>
+                <h1 className={styles.subheader}>Requests</h1>
             </div>
             <div className={styles.offers}>
                 {

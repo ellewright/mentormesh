@@ -7,32 +7,25 @@
 }
 
 .header {
-    background-color: var(--dark-gray);
+    font-size: 1.5rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0.25rem;
-    margin-bottom: 2.5rem;
 }
 
 .title {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: var(--orange);
-    color: transparent;
     cursor: pointer;
     transition: 250ms;
 }
 
 .title:hover {
-    background-color: var(--light-orange);
     transform: scale(1.05);
 }
 
 .title:active {
-    background-color: var(--dark-orange);
     transform: scale(0.9875);
 }
 
@@ -41,6 +34,19 @@
     grid-template-columns: auto auto auto auto;
     row-gap: 2rem;
     column-gap: 2rem;
+}
+
+.subheader {
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.subheader:hover {
+    transform: scale(1.05);
+}
+
+.subheader:active {
+    transform: scale(0.95);
 }
 
 .offers {
