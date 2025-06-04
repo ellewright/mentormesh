@@ -3,9 +3,9 @@ from model.skill import Skill
 from pydantic import BaseModel
 
 class Status(Enum):
-    COMPLETE = "complete"
-    INCOMPLETE = "incomplete"
-    IN_PROCESS = "in process"
+    APPROVED = "approved"
+    REJECTED = "rejected"
+    PENDING = "pending"
 
 class Request(BaseModel):
     id: int
