@@ -7,13 +7,12 @@
 }
 
 .header {
-    font-size: 1.5rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0.25rem;
+    font-size: 1.5rem;
 }
 
 .title {
