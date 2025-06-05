@@ -8,87 +8,74 @@
 }
 
 .header {
-    background-color: var(--dark-gray);
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0.25rem;
-    margin-bottom: 2.5rem;
-}
-
-.details {
-    color: var(--light-gray);
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.details>* {
-    background-color: var(--black);
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 99999px;
-    padding: 0rem 1rem;
-    transition: 250ms;
-}
-
-.details>*:hover {
-    transform: scale(1.05);
-}
-
-.details>*:active {
-    transform: scale(0.95);
-}
-
-.details>p>*:hover {
-    color: var(--white);
-}
-
-.details>p>*:active {
-    color: var(--dark-gray);
-    transform: scale(0.95);
-}
-
-.category {
-    color: inherit;
-    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 .title {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: var(--orange);
-    color: transparent;
-    height: 3rem;
-    border-radius: 0;
-    padding: 0;
     cursor: pointer;
     transition: 250ms;
 }
 
 .title:hover {
-    background-color: var(--light-orange);
     transform: scale(1.05);
 }
 
 .title:active {
-    background-color: var(--dark-orange);
     transform: scale(0.9875);
 }
 
 .body {
-    background-color: var(--dark-gray);
     width: 100%;
     border-radius: 0.25rem;
 }
 
 .body>p {
     padding: 0 1.5rem 0 1.5rem;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0 1rem 0;
+}
+
+.usernameContainer,
+.categoryContainer {
+    transition: 250ms;
+}
+
+.usernameContainer:hover,
+.categoryContainer:hover {
+    transform: scale(1.05);
+}
+
+.usernameContainer:active,
+.categoryContainer:active {
+    transform: scale(0.95);
+}
+
+.username,
+.category {
+    background: -webkit-linear-gradient(var(--light-orange), var(--dark-orange));
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+.description {
+    background-color: var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
 }
 
 .footer {
@@ -115,5 +102,5 @@
 }
 
 .footer>div {
-    color: var(--dark-gray);
+    color: var(--white);
 }

@@ -36,24 +36,32 @@ export default function SkillPage() {
     }, [id])
 
     return (
+        // TODO: Re-style SkillPage
         <div className={styles.container}>
             <div className={styles.header}>
-                <div className={styles.details}>
-                    <p className={styles.usernameContainer}>
-                        <Link to={`/${mentor.username}`} className={styles.category}>
+                <h1 className={styles.title}>{skill.title ? skill.title : ""}</h1>
+            </div>
+            <div className={styles.body}>
+                <div className={styles.links}>
+                    <div className={styles.usernameContainer}>
+                        <Link to={`/${mentor.username}`} className={styles.username}>
                             {mentor.username}
                         </Link>
-                    </p>
-                    <h1 className={styles.title}>{skill.title ? skill.title : ""}</h1>
-                    <p className={styles.categoryContainer}>
+                    </div>
+                    <div className={styles.categoryContainer}>
                         <Link to={`/skills/${skill.category}`} className={styles.category}>
                             {skill.category ? `${skill.category.toUpperCase()}` : ""}
                         </Link>
+                    </div>
+                </div>
+                <div className={styles.description}>
+                    <h2>
+                        Description
+                    </h2>
+                    <p>
+                        {skill.description ? skill.description : ""}
                     </p>
                 </div>
-            </div>
-            <div className={styles.body}>
-                <p>{skill.description ? skill.description : ""}</p>
             </div>
             <a className={styles.footer} href={`/offer/${skill.id}`}>
                 <div>

@@ -52,6 +52,7 @@ export default function OfferPage() {
     }
 
     return (
+        // TODO: Re-style OfferPage.jsx
         <div className={styles.container}>
             <div className={styles.header}>
                 <h1 className={styles.title}>{offeredSkill.title}</h1>
