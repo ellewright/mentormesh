@@ -3,6 +3,8 @@ import book from "../../../assets/book.png"
 import { Link, Outlet, useNavigate, useNavigation } from "react-router-dom"
 
 export default function NavBar() {
+    // TODO: Clean up/refactor code
+
     const navigate = useNavigate()
 
     function handleSubmit(e) {

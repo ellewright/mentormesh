@@ -52,13 +52,13 @@ export default function OfferPage() {
     }
 
     return (
-        // TODO: Re-style OfferPage.jsx
         <div className={styles.container}>
             <div className={styles.header}>
                 <h1 className={styles.title}>{offeredSkill.title}</h1>
             </div>
-            <div className={styles.body}>
-                <form className={styles.form} onSubmit={handleSubmit}>
+
+            <form className={styles.form} onSubmit={handleSubmit}>
+                <div className={styles.body}>
                     <label>
                         Options to trade:
                     </label>
@@ -67,9 +67,9 @@ export default function OfferPage() {
                             <option key={skill.id}>{skill.title}</option>
                         ))}
                     </select>
-                    <button>Offer</button>
-                </form>
-            </div>
+                </div>
+                <button>Offer</button>
+            </form>
             {isSuccessful && <OfferRequestSuccessModal setIsOpen={setIsSuccessful} />}
             {isFailure && <OfferRequestFailureModal setIsOpen={setIsFailure} />}
         </div>
