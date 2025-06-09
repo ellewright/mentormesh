@@ -4,7 +4,9 @@ import styles from "./HomePage.module.css"
 export default function HomePage() {
     return (
         <div className={styles.container}>
-            <h1>A new way to imagine freelance work.</h1>
+            <h1>
+                A new way to imagine freelance work.
+            </h1>
             <p>
                 MentorMesh enables you to easily share your talents with others <span className={styles.bold}>in exchange for other skills.</span>
             </p>
@@ -15,7 +17,10 @@ export default function HomePage() {
                 Connect to a nearby professional and offer to trade skills!
             </p>
             <div>
-                <Link className={styles.button} to="/skills">
+                <Link
+                    className={styles.button}
+                    to="/skills"
+                >
                     Learn more
                 </Link>
             </div>

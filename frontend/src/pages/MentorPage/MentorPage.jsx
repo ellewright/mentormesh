@@ -37,30 +37,48 @@ export default function MentorPage() {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <h1 className={styles.title}>{mentor.username ? mentor.username : ""}</h1>
+                <h1 className={styles.title}>
+                    {mentor.username ? mentor.username : ""}
+                </h1>
             </div>
             <div className={styles.list}>
                 {skills.map((skill) => (
-                    <SkillCard key={skill.id} id={skill.id} title={skill.title} description={skill.description} category={skill.category} />
+                    <SkillCard
+                        key={skill.id}
+                        id={skill.id}
+                        title={skill.title}
+                        description={skill.description}
+                        category={skill.category}
+                    />
                 ))}
             </div>
             <div>
-                <h1 className={styles.subheader}>Offers</h1>
+                <h1 className={styles.subheader}>
+                    Offers
+                </h1>
             </div>
             <div className={styles.offers}>
                 {
                     offers.map((offer) => (
-                        <OfferCard key={offer.id} offer={offer} />
+                        <OfferCard
+                            key={offer.id}
+                            offer={offer}
+                        />
                     ))
                 }
             </div>
             <div>
-                <h1 className={styles.subheader}>Requests</h1>
+                <h1 className={styles.subheader}>
+                    Requests
+                </h1>
             </div>
             <div className={styles.offers}>
                 {
                     requests.map((request) => (
-                        <OfferCard key={request.id} offer={request} />
+                        <OfferCard
+                            key={request.id}
+                            offer={request}
+                        />
                     ))
                 }
             </div>

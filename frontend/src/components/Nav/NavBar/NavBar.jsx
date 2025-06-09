@@ -1,10 +1,8 @@
 import styles from "./NavBar.module.css"
 import book from "../../../assets/book.png"
-import { Link, Outlet, useNavigate, useNavigation } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function NavBar() {
-    // TODO: Clean up/refactor code
-
     const navigate = useNavigate()
 
     function handleSubmit(e) {
@@ -22,9 +20,7 @@ export default function NavBar() {
             </Link>
             <h1>
                 <span className={styles.header}>
-
                     MentorMesh
-
                 </span> : <span className={styles.slogan}>
                     A Peer-to-Peer Learning Platform
                 </span>

@@ -59,12 +59,18 @@ export default function OfferCard({ offer }) {
             </div>
             <div className={styles.sender}>
                 <p className={styles.usernameContainer}>
-                    <Link to={`/${sender.username}`} className={styles.username}>
+                    <Link
+                        to={`/${sender.username}`}
+                        className={styles.username}
+                    >
                         {sender.username}'s skill
                     </Link>
                 </p>
                 <h1 className={styles.skillTitleContainer}>
-                    <Link to={`/skill/${senderSkill.id}`} className={styles.skillTitle}>
+                    <Link
+                        to={`/skill/${senderSkill.id}`}
+                        className={styles.skillTitle}
+                    >
                         {senderSkill.title}
                     </Link>
                 </h1>

@@ -54,21 +54,29 @@ export default function OfferPage() {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <h1 className={styles.title}>{offeredSkill.title}</h1>
+                <h1 className={styles.title}>
+                    {offeredSkill.title}
+                </h1>
             </div>
-
-            <form className={styles.form} onSubmit={handleSubmit}>
+            <form
+                className={styles.form}
+                onSubmit={handleSubmit}
+            >
                 <div className={styles.body}>
                     <label>
                         Options to trade:
                     </label>
                     <select className={styles.select}>
                         {offerableSkills.map((skill) => (
-                            <option key={skill.id}>{skill.title}</option>
+                            <option key={skill.id}>
+                                {skill.title}
+                            </option>
                         ))}
                     </select>
                 </div>
-                <button>Offer</button>
+                <button>
+                    Offer
+                </button>
             </form>
             {isSuccessful && <OfferRequestSuccessModal setIsOpen={setIsSuccessful} />}
             {isFailure && <OfferRequestFailureModal setIsOpen={setIsFailure} />}

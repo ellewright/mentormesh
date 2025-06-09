@@ -3,7 +3,10 @@ import styles from "./OfferRequestFailureModal.module.css"
 export default function OfferRequestFailureModal({ setIsOpen }) {
     return (
         <>
-            <div className={styles.darkBG} onClick={() => setIsOpen(false)} />
+            <div
+                className={styles.darkBG}
+                onClick={() => setIsOpen(false)}
+            />
             <div className={styles.centered}>
                 <div className={styles.modal}>
                     <div className={styles.modalHeader}>
@@ -16,7 +19,10 @@ export default function OfferRequestFailureModal({ setIsOpen }) {
                     </div>
                     <div className={styles.modalActions}>
                         <div className={styles.actionsContainer}>
-                            <button className={styles.ok} onClick={() => setIsOpen(false)}>
+                            <button
+                                className={styles.ok}
+                                onClick={() => setIsOpen(false)}
+                            >
                                 Ok
                             </button>
                         </div>
