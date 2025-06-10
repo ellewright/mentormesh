@@ -73,7 +73,7 @@
     background-image: linear-gradient(to top, var(--light-orange), var(--dark-orange));
     color: var(--white);
     width: 6rem;
-    border-radius: 0.25rem;
+    border-radius: 99999px;
     padding: 0.5rem 0 0.5rem 0;
     margin-top: 1rem;
     border: none;
@@ -82,9 +82,11 @@
 }
 
 .form>button:hover {
+    box-shadow: 0 5px 10px -5px var(--dark-orange);
     transform: scale(1.05);
 }
 
 .form>button:active {
+    box-shadow: 0 5px 10px -5px var(--black);
     transform: scale(0.95);
 }

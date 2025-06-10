@@ -23,11 +23,13 @@
 }
 
 .button:hover {
+    box-shadow: 0 10px 20px -10px var(--dark-orange);
     background: var(--light-orange);
     transform: scale(1.05);
 }
 
 .button:active {
+    box-shadow: 0 10px 20px -10px var(--black);
     background: var(--dark-orange);
     transform: scale(0.95);
 }

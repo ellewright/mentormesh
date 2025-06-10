@@ -86,7 +86,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0.25rem;
+    border-radius: 99999px;
     margin-top: 2rem;
     transition: 250ms;
     text-decoration: none;
@@ -94,10 +94,13 @@
 }
 
 .footer:hover {
+    box-shadow: 0 7.5px 12.5px -7.5px var(--dark-orange);
     transform: scale(1.05);
 }
 
 .footer:active {
+    box-shadow: 0 7.5px 12.5px -7.5px var(--black);
+    box-shadow: 0 10px 10px -10px var(--black);
     transform: scale(0.95);
 }
 
