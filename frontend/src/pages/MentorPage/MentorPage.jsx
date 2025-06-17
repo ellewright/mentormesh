@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { getMentorByUsername, getRequestsByReceiverId, getRequestsBySenderId, getSkillsByMentor } from "../../api/config"
 import SkillCard from "../../components/Skill/SkillCard/SkillCard"
 import OfferCard from "../../components/Offer/OfferCard/OfferCard"
+import SkillList from "../../components/Skill/SkillList/SkillList"
 
 export default function MentorPage() {
     const { username } = useParams()
@@ -41,17 +42,7 @@ export default function MentorPage() {
                     {mentor.username ? mentor.username : ""}
                 </h1>
             </div>
-            <div className={styles.list}>
-                {skills.map((skill) => (
-                    <SkillCard
-                        key={skill.id}
-                        id={skill.id}
-                        title={skill.title}
-                        description={skill.description}
-                        category={skill.category}
-                    />
-                ))}
-            </div>
+            <SkillList skills={skills} />
             <div>
                 <h1 className={styles.subheader}>
                     Offers

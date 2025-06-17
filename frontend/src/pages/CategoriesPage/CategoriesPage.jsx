@@ -3,6 +3,7 @@ import styles from "./CategoriesPage.module.css"
 import { getSkillsByCategory } from "../../api/config"
 import { useParams } from "react-router-dom"
 import SkillCard from "../../components/Skill/SkillCard/SkillCard"
+import SkillList from "../../components/Skill/SkillList/SkillList"
 
 export default function CategoriesPage() {
     const { category } = useParams()
@@ -28,17 +29,7 @@ export default function CategoriesPage() {
                     {category.toUpperCase()}
                 </h1>
             </div>
-            <div className={styles.list}>
-                {skills.map((skill) => (
-                    <SkillCard
-                        key={skill.id}
-                        id={skill.id}
-                        title={skill.title}
-                        description={skill.description}
-                        category={skill.category}
-                    />
-                ))}
-            </div>
+            <SkillList skills={skills} />
         </div>
     )
 }

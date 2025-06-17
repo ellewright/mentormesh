@@ -28,13 +28,6 @@
     transform: scale(0.9875);
 }
 
-.list {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    row-gap: 2rem;
-    column-gap: 2rem;
-}
-
 .subheader {
     cursor: pointer;
     transition: 250ms;
