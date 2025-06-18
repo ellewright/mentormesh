@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import styles from "./SkillPage.module.css"
 import { getMentorById, getSkillById } from "../../api/config"
 import { Link, useParams } from "react-router-dom"
+import Skill from "../../components/Skill/Skill/Skill"
 
 export default function SkillPage() {
     const { id } = useParams()
@@ -40,42 +41,7 @@ export default function SkillPage() {
             <div className={styles.header}>
                 <h1 className={styles.title}>{skill.title ? skill.title : ""}</h1>
             </div>
-            <div className={styles.body}>
-                <div className={styles.links}>
-                    <div className={styles.usernameContainer}>
-                        <Link
-                            to={`/${mentor.username}`}
-                            className={styles.username}
-                        >
-                            {mentor.username}
-                        </Link>
-                    </div>
-                    <div className={styles.categoryContainer}>
-                        <Link
-                            to={`/skills/${skill.category}`}
-                            className={styles.category}
-                        >
-                            {skill.category ? `${skill.category.toUpperCase()}` : ""}
-                        </Link>
-                    </div>
-                </div>
-                <div className={styles.description}>
-                    <h2>
-                        Description
-                    </h2>
-                    <p>
-                        {skill.description ? skill.description : ""}
-                    </p>
-                </div>
-            </div>
-            <a
-                className={styles.footer}
-                href={`/offer/${skill.id}`}
-            >
-                <div>
-                    Make an offer
-                </div>
-            </a>
+            <Skill skill={skill} mentor={mentor} />
         </div>
     )
 }
